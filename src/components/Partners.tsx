@@ -23,7 +23,7 @@ export function Partners() {
           width={500}
           height={200}
           quality={100}
-          className="hover:animate-shake h-10 w-max cursor-pointer object-contain"
+          className="h-10 w-max cursor-pointer object-contain hover:animate-shake"
           onClick={() =>
             window.open("https://www.instagram.com/juridia.adv/", "_blank")
           }
@@ -34,7 +34,7 @@ export function Partners() {
           width={500}
           height={200}
           quality={100}
-          className="hover:animate-shake h-10 w-max cursor-pointer object-contain"
+          className="h-10 w-max cursor-pointer object-contain hover:animate-shake"
           onClick={() =>
             window.open(
               "https://www.facebook.com/profile.php?id=61552119535431",
@@ -48,23 +48,24 @@ export function Partners() {
           width={500}
           height={200}
           quality={100}
-          className="hover:animate-shake h-10 w-max cursor-pointer object-contain"
+          className="h-10 w-max cursor-pointer object-contain hover:animate-shake"
+          // onClick={() => window.open("whatsappnumber", "_blank")}
         />
-        <Image
+        {/* <Image
           src="/linkedin.svg"
           alt=""
           width={500}
           height={200}
           quality={100}
           className="hover:animate-shake h-10 w-max cursor-pointer object-contain"
-        />
+        /> */}
         <Image
           src="/youtube.svg"
           alt=""
           width={500}
           height={200}
           quality={100}
-          className="hover:animate-shake h-10 w-max cursor-pointer object-contain"
+          className="h-10 w-max cursor-pointer object-contain hover:animate-shake"
           onClick={() =>
             window.open(
               "https://www.youtube.com/@JuridInteligenciaArtificial",

@@ -12,7 +12,7 @@ export function Hero() {
     <div className="mx-auto flex h-[calc(100vh-80px)] w-11/12 flex-col items-center justify-center">
       <div
         ref={ref1}
-        className="shadow-secondary relative flex h-[90%] w-full flex-col items-center justify-center overflow-hidden rounded-3xl shadow-md"
+        className="relative flex h-[90%] w-full flex-col items-center justify-center overflow-hidden rounded-3xl shadow-md shadow-secondary"
       >
         <video
           autoPlay
@@ -21,7 +21,7 @@ export function Hero() {
           className="absolute left-0 top-0 h-full w-full object-cover"
           src="/video2.mp4"
         />
-        <div className="bg-secondary/70 absolute h-full w-full" />
+        <div className="absolute h-full w-full bg-secondary/70" />
         <div className="z-10 flex flex-col items-center justify-center gap-8 px-4 text-center text-white lg:w-2/3 lg:px-0">
           <span
             className={twMerge(
@@ -47,11 +47,22 @@ export function Hero() {
               isVisible1.isIntersecting && "opacity-100",
             )}
           >
-            <button className="flex items-center gap-2 rounded-xl border bg-white p-4 font-semibold text-primary transition duration-200 hover:-translate-y-0.5 hover:scale-[1] hover:border-white hover:bg-transparent hover:text-white">
+            <button
+              onClick={() =>
+                window.open(
+                  "https://app.juridia.com.br/sign-in?register",
+                  "_blank",
+                )
+              }
+              className="flex items-center gap-2 rounded-xl border bg-white p-4 font-semibold text-primary transition duration-200 hover:-translate-y-0.5 hover:scale-[1] hover:border-white hover:bg-transparent hover:text-white"
+            >
               Acesse o Jurid.IA Agora
               <ArrowRight />
             </button>
-            <button className="rounded-xl border bg-transparent p-4 font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:scale-[1] hover:border-primary hover:bg-white hover:text-primary">
+            <button
+              // onClick={() => window.open("whatsappnumber", "_blank")}
+              className="rounded-xl border bg-transparent p-4 font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:scale-[1] hover:border-primary hover:bg-white hover:text-primary"
+            >
               Tire suas Dúvidas no WhatsApp
             </button>
           </div>

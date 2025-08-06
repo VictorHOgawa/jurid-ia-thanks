@@ -1,5 +1,5 @@
 "use client";
-import { ChevronDown, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
@@ -18,11 +18,22 @@ export function Header() {
           quality={100}
           className="h-full w-max object-contain"
         />
-        <div className="hidden items-center justify-between lg:flex lg:gap-8 xl:gap-16">
-          <button className="rounded-xl border border-primary bg-transparent px-4 py-2 text-primary transition duration-200 hover:-translate-y-0.5 hover:scale-[1] hover:bg-primary hover:text-white hover:shadow-md">
+        <div className="hidden items-center justify-between lg:flex lg:gap-8">
+          <button
+            // onClick={() => window.open("whatsappnumber", "_blank")}
+            className="rounded-xl border border-primary bg-transparent px-4 py-2 text-primary transition duration-200 hover:-translate-y-0.5 hover:scale-[1] hover:bg-primary hover:text-white hover:shadow-md"
+          >
             Conhecer
           </button>
-          <button className="rounded-xl border border-primary bg-primary px-4 py-2 text-white transition duration-200 hover:-translate-y-0.5 hover:scale-[1] hover:border hover:bg-white hover:text-primary hover:shadow-md">
+          <button
+            onClick={() =>
+              window.open(
+                "https://app.juridia.com.br/sign-in?register",
+                "_blank",
+              )
+            }
+            className="rounded-xl border border-primary bg-primary px-4 py-2 text-white transition duration-200 hover:-translate-y-0.5 hover:scale-[1] hover:border hover:bg-white hover:text-primary hover:shadow-md"
+          >
             Fazer Parte
           </button>
         </div>
@@ -36,7 +47,7 @@ export function Header() {
       <>
         <div
           className={twMerge(
-            "fixed z-[9999999] flex h-screen w-2/3 -translate-x-full flex-col gap-8 border-r border-r-secondary bg-primary p-2 text-background transition duration-500 lg:hidden",
+            "fixed z-[9999999] flex h-screen w-2/3 -translate-x-full flex-col gap-8 border-r border-r-secondary bg-primary p-2 pt-12 text-background transition duration-500 lg:hidden",
             isSidebarOpen && "translate-x-0",
           )}
         >
@@ -48,27 +59,23 @@ export function Header() {
             className="h-auto w-56 cursor-pointer object-contain"
           />
 
-          <div className="flex flex-col items-center justify-between gap-8">
-            <span className="group relative text-white transition duration-200 hover:cursor-pointer">
-              <div className="absolute bottom-0 h-px w-full -translate-x-5 bg-white opacity-0 transition duration-200 group-hover:translate-x-0 group-hover:opacity-100" />
-              Home
-            </span>
-            <span className="group relative text-white transition duration-200 hover:cursor-pointer">
-              <div className="absolute bottom-0 h-px w-full -translate-x-5 bg-white opacity-0 transition duration-200 group-hover:translate-x-0 group-hover:opacity-100" />
-              História
-            </span>
-            <span className="group relative flex items-center gap-2 text-white transition duration-200 hover:cursor-pointer">
-              <div className="absolute bottom-0 h-px w-full -translate-x-5 bg-white opacity-0 transition duration-200 group-hover:translate-x-0 group-hover:opacity-100" />
-              Tecnologia
-              <ChevronDown />
-            </span>
-            <button className="rounded-xl border border-white bg-transparent px-4 py-2 text-white transition duration-200 hover:-translate-y-0.5 hover:scale-[1] hover:bg-white hover:text-primary">
-              Administrativo
-            </button>
-            <button className="rounded-xl border border-white bg-white px-4 py-2 text-primary transition duration-200 hover:-translate-y-0.5 hover:scale-[1] hover:border hover:bg-transparent hover:text-white">
-              Fazer Orçamento
-            </button>
-          </div>
+          <button
+            // onClick={() => window.open("whatsappnumber", "_blank")}
+            className="rounded-xl border border-white bg-transparent px-4 py-2 text-white transition duration-200 hover:-translate-y-0.5 hover:scale-[1] hover:border-primary hover:bg-white hover:text-primary hover:shadow-md"
+          >
+            Conhecer
+          </button>
+          <button
+            onClick={() =>
+              window.open(
+                "https://app.juridia.com.br/sign-in?register",
+                "_blank",
+              )
+            }
+            className="rounded-xl border border-primary bg-white px-4 py-2 text-primary transition duration-200 hover:-translate-y-0.5 hover:scale-[1] hover:border hover:border-white hover:bg-primary hover:text-white hover:shadow-md"
+          >
+            Fazer Parte
+          </button>
         </div>
         <button
           onClick={() => setIsSidebarOpen(false)}

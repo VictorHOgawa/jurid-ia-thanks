@@ -20,7 +20,7 @@ export function CTA() {
           className="absolute left-0 top-0 h-full w-full object-cover"
           src="/video3.mp4"
         />
-        <div className="bg-secondary/70 absolute left-0 top-0 z-10 h-full w-full" />
+        <div className="absolute left-0 top-0 z-10 h-full w-full bg-secondary/70" />
         <div className="z-20 mx-auto flex h-full w-3/4 flex-col justify-center gap-8 py-2">
           <span
             ref={ref1}
@@ -41,13 +41,21 @@ export function CTA() {
               Libere seu potencial jurídico com uma IA que otimiza tarefas e
               acelera processos de forma prática e eficiente.
             </span>
-            <button className="text-secondary hover:bg-secondary w-max rounded-xl border border-white bg-white px-8 py-4 font-semibold transition duration-200 hover:-translate-y-0.5 hover:scale-[1] hover:text-white">
+            <button
+              onClick={() =>
+                window.open(
+                  "https://app.juridia.com.br/sign-in?register",
+                  "_blank",
+                )
+              }
+              className="w-max rounded-xl border border-white bg-white px-8 py-4 font-semibold text-secondary transition duration-200 hover:-translate-y-0.5 hover:scale-[1] hover:bg-secondary hover:text-white"
+            >
               Utilizar Agora
             </button>
           </div>
         </div>
       </div>
-      <div className="text-secondary flex h-1/2 w-full flex-col items-center justify-center bg-white lg:h-full lg:w-1/2">
+      <div className="flex h-1/2 w-full flex-col items-center justify-center bg-white text-secondary lg:h-full lg:w-1/2">
         <div className="mx-auto flex h-full w-3/4 flex-col justify-center gap-8 py-2">
           <span
             ref={ref2}
@@ -68,7 +76,10 @@ export function CTA() {
               Clique abaixo para conhecer como o Júri de A pode transformar sua
               rotina jurídica e aumentar sua produtividade.
             </span>
-            <button className="border-secondary bg-secondary hover:text-secondary w-max rounded-xl border px-8 py-4 font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:scale-[1] hover:bg-white">
+            <button
+              // onClick={() => window.open("whatsappnumber", "_blank")}
+              className="w-max rounded-xl border border-secondary bg-secondary px-8 py-4 font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:scale-[1] hover:bg-white hover:text-secondary"
+            >
               Converse com nosso time
             </button>
           </div>

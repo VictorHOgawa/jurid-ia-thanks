@@ -42,7 +42,10 @@ export function Projects() {
         <div className="col-span-3 flex items-center justify-center rounded-3xl bg-opacity-30 bg-[url('/project-3.jpg')] bg-cover bg-center bg-no-repeat lg:col-span-1" />
         <div className="col-span-3 flex items-center justify-center rounded-3xl bg-opacity-30 bg-[url('/project-2.jpg')] bg-cover bg-center bg-no-repeat lg:col-span-1" />
       </div>
-      <button className="rounded-3xl border border-primary bg-primary px-8 py-4 font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:scale-[1] hover:bg-transparent hover:text-primary lg:w-max">
+      <button
+        // onClick={() => window.open("whatsappnumber", "_blank")}
+        className="rounded-3xl border border-primary bg-primary px-8 py-4 font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:scale-[1] hover:bg-transparent hover:text-primary lg:w-max"
+      >
         Conheça Como Simplificar Sua Advocacia
       </button>
     </div>
