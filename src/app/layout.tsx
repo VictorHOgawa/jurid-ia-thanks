@@ -20,7 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html>
-      <head>
+      <body className={`${dmSans.className}`}>
+        {/* Google Tag Manager */}
         <Script
           id="gtm-script"
           strategy="afterInteractive"
@@ -54,8 +55,8 @@ export default function RootLayout({
           `,
           }}
         />
-      </head>
-      <body className={`${dmSans.className}`}>
+
+        {/* GTM noscript */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-MN4RR9XX"
@@ -74,6 +75,7 @@ export default function RootLayout({
             src="https://www.facebook.com/tr?id=555824637452483&ev=PageView&noscript=1"
           />
         </noscript>
+
         {children}
       </body>
     </html>
