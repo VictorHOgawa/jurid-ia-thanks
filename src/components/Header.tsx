@@ -11,7 +11,7 @@ export function Header() {
     <>
       <div className="Header z-10 mx-auto flex h-20 w-11/12 items-center justify-between pt-4">
         <Image
-          src="/Logo-dark.png"
+          src="/logo-dark.png"
           alt=""
           width={500}
           height={100}
@@ -28,7 +28,7 @@ export function Header() {
         </div>
         <button
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-          className="text-secondary h-6 w-6 rounded-xl bg-transparent p-1 lg:hidden"
+          className="h-6 w-6 rounded-xl bg-transparent p-1 text-secondary lg:hidden"
         >
           <Menu />
         </button>
@@ -36,7 +36,7 @@ export function Header() {
       <>
         <div
           className={twMerge(
-            "border-r-secondary fixed z-[9999999] flex h-screen w-2/3 -translate-x-full flex-col gap-8 border-r bg-primary p-2 text-background transition duration-500 lg:hidden",
+            "fixed z-[9999999] flex h-screen w-2/3 -translate-x-full flex-col gap-8 border-r border-r-secondary bg-primary p-2 text-background transition duration-500 lg:hidden",
             isSidebarOpen && "translate-x-0",
           )}
         >
