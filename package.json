@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^15.4.5",
     "@rocketseat/eslint-config": "^2.2.2",
     "country-flag-icons": "^1.5.13",
     "emoji-dictionary": "^1.0.11",
